@@ -1,6 +1,6 @@
 <?php
 $autoKonfiguration = 
-array('Hersteller'=> array('VW', 'BMW', 'FORD'),
+array('Hersteller'=> array('VW', 'BMW', 'FORD','Audi'),
         'Bauart' => array('SUV', 'Kombi', 'Cabrio'), 
         'Motor' => array('Benzin', 'Diesel', 
                         'Elektro' /*=> array('Trocken','Brennstoffzelle','Fusion')*/
@@ -26,5 +26,52 @@ foreach($autoKonfiguration as $key => $inhalt)     // Zerlegung in Schlüssel un
     }
         echo "<br>";
 }
+echo "<hr>"
 
 ?>
+
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Autokonfiguration</title>
+</head>
+<body>
+<form action="" method="get">
+    <select id="hersteller" name="hersteller">
+        <?php
+            foreach($autoKonfiguration['Hersteller'] as $value)
+            { 
+                echo "<option>".$value."</option>";
+            }
+        ?>
+    </select>
+    <select>
+        <?php
+            foreach($autoKonfiguration['Bauart'] as $value)
+            { 
+                echo "<option>".$value."</option>";
+            }
+        ?>
+    </select>
+    <select>
+        <?php
+            foreach($autoKonfiguration['Motor'] as $value)
+            { 
+                echo "<option>".$value."</option>";
+            }
+        ?>
+    </select>
+
+
+
+
+</form>
+
+
+</body>
+
+
+</html>
