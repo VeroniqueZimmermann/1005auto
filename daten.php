@@ -16,21 +16,18 @@ $bgFarbe = array('Hersteller' => 'lightblue',
                     'Motor' => 'purple',
                     'Getriebe' => 'yellow');
 
-$autopreis = array('VW' => 1000,
-                    'BMW' => 2000,
-                    'FORD' => 3000,
-                    'Audi' => 4000);
-
-$bauartpreis = array('SUV' => 1000, 
+$autopreis = array('VW' => 1000, 
+                    'BMW' => 2000, 
+                    'FORD' => 3000, 
+                    'Audi' => 4000,
+                    'SUV' => 1000, 
                     'Kombi' => 2000, 
-                    'Cabrio' => 3000);
-
-$motorpreis = array('Benzin' => 1000, 
+                    'Cabrio' => 3000,
+                    'Benzin' => 1000, 
                     'Diesel' => 2000, 
                     'Elektro' => 3000, 
-                    'Hybrid' => 4000);
-
-$getriebepreis = array('manuell' => 1000, 
-                        'automatisch' => 2000)
+                    'Hybrid' => 4000,
+                    'manuell' => 1000, 
+                    'automatisch' => 2000);
 
 ?>

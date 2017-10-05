@@ -75,7 +75,7 @@ echo "<hr>"
         <select name=$key style='background-color: $bgFarbe[$key]'>";
         foreach($inhalt as $value)
         {
-            echo "<option>".$value."</option>";
+            echo "<option value=$autopreis[$value]>".$value."</option>";
         }
         echo "</select>";
         echo "</div>";
