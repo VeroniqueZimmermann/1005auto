@@ -6,9 +6,15 @@ $autoKonfiguration =
     'Motor' => array(
         'Benzin', 'Diesel',
         'Elektro', 'Hybrid' /*=> array('Trocken','Brennstoffzelle','Fusion')*/
-    )
-);        // Bauart = Kombi, Cabrio // numerisch indiziertes eindimensionales Array
-
+                ),
+    'Getriebe' => array(
+        'manuell', 'automatisch'
+                        )
+);
+$bgFarbe = array('Hersteller' => 'lightblue',
+                    'Bauart' => 'lime',
+                    'Motor' => 'purple',
+                    'Getriebe' => 'yellow');
 
 /* echo "<pre>"; 
 print_r($autoKonfiguration);
@@ -39,6 +45,20 @@ echo "<hr>"
 
     <meta charset="utf-8">
     <title>Autokonfiguration</title>
+    <style>
+    body{
+        background-color: grey;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+    }
+    
+    div{
+        position: relative;
+        display: inline;
+        padding: 10px;
+    }
+
+    </style>
 </head>
 <body>
 <form action="http://dmnb.consulting/user/ScPe/respond/respond.php" method="post">
@@ -63,17 +83,19 @@ echo "<hr>"
         echo "<option>" . $value . "</option>";
     }
     echo "</select>";*/
-
     foreach($autoKonfiguration as $key => $inhalt)
     {
-        echo "<select name=$key>";
+        echo "<div style='background-color: $bgFarbe[$key]'>
+        <select name=$key style='background-color: $bgFarbe[$key]'>";
         foreach($inhalt as $value)
         {
             echo "<option>".$value."</option>";
         }
         echo "</select>";
+        echo "</div>";
     }
     echo "<input type='submit' value='bestellen'>";
+    
     ?>
 </form>
 
