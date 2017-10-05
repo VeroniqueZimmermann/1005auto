@@ -1,5 +1,4 @@
 <?php
-
 include '/daten.php';
 
 /* echo "<pre>"; 
@@ -17,6 +16,7 @@ foreach ($autoKonfiguration as $key => $inhalt)     // Zerlegung in Schlüssel u
     foreach ($inhalt as $wert)                       // $bla as $key - eindimensionales
     {
         echo "$wert,";                              // wenn teils weitere Werte vorhanden, dann so, falls $wert noch weitere Informationen, dann andere Schleife
+
     }
     echo "<br>";
 }
@@ -69,19 +69,19 @@ echo "<hr>"
         echo "<option>" . $value . "</option>";
     }
     echo "</select>";*/
-    foreach($autoKonfiguration as $key => $inhalt)
-    {
-        echo "<div style='background-color: $bgFarbe[$key]'>
-        <select name=$key style='background-color: $bgFarbe[$key]'>";
-        foreach($inhalt as $value)
+    foreach ($autoKonfiguration as $key => $inhalt)
         {
-            echo "<option value=$autopreis[$value]>".$value."</option>";
+        echo "<div style='background-color:  $bgFarbe[$key]'>
+        <select name=$key style='background-color:  $bgFarbe[$key]'>";
+        foreach ($inhalt as $value)
+            {
+            echo "<option value= $autopreis[$value]>" . $value . "</option>";
         }
         echo "</select>";
         echo "</div>";
     }
     echo "<input type='submit' value='bestellen'>";
-    
+
     ?>
 </form>
 
