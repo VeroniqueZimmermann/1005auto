@@ -1,20 +1,6 @@
 <?php
-$autoKonfiguration =
-    array(
-    'Hersteller' => array('VW', 'BMW', 'FORD', 'Audi'),
-    'Bauart' => array('SUV', 'Kombi', 'Cabrio'),
-    'Motor' => array(
-        'Benzin', 'Diesel',
-        'Elektro', 'Hybrid' /*=> array('Trocken','Brennstoffzelle','Fusion')*/
-                ),
-    'Getriebe' => array(
-        'manuell', 'automatisch'
-                        )
-);
-$bgFarbe = array('Hersteller' => 'lightblue',
-                    'Bauart' => 'lime',
-                    'Motor' => 'purple',
-                    'Getriebe' => 'yellow');
+
+include '/daten.php';
 
 /* echo "<pre>"; 
 print_r($autoKonfiguration);
